@@ -36,7 +36,6 @@ public class LinkCounter : MonoBehaviour
             }
         }
         AddLinkToList(link);
-        CheckLoop();
     }
 
     void AddLinkToList(GameObject link)
