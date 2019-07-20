@@ -7,7 +7,9 @@ public class KillBox : MonoBehaviour
 {
     [HideInInspector]
     public int goldLost;
+    [HideInInspector]
     public int silverLost;
+    [HideInInspector]
     public int copperLost;
     AudioManager AM;
     AudioSource AMSource;
