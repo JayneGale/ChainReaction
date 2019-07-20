@@ -19,7 +19,7 @@ public class KillBox : MonoBehaviour
         goldLost = 0;
         silverLost = 0;
         copperLost = 0;
-        AM = FindObjectOfType<AudioManager>();
+  //      AM = FindObjectOfType<AudioManager>();
     }
 
     public List<int> LostLinkCount() {
@@ -32,21 +32,19 @@ public class KillBox : MonoBehaviour
         if (other.gameObject.CompareTag("Gold"))
         {
             goldLost += 1;
-            AM.PlayOneShot("GoldFallsOffscreen");
             //           Debug.Log("Gold lost = " + goldLost);
 
         }
         if (other.gameObject.CompareTag("Silver"))
         {
             silverLost += 1;
-            AM.PlayOneShot("LinkFallsOffscreen");
 
         }
         if (other.gameObject.CompareTag("Copper"))
         {
             copperLost += 1;
-            AM.PlayOneShot("LinkFallsOffscreen");
         }
+        AudioManager.instance.PlayOneShot("GoldFallsOffscreen");
         Destroy(other.gameObject);
     }
 
