@@ -1,0 +1,2 @@
+D:\932400056\Documents\Git\ChainReaction\New Unity Project\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\932400056\Documents\Git\ChainReaction\New Unity Project\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
