@@ -20,7 +20,7 @@ public class GunLogic : MonoBehaviour
         boundList.Add(rotatingBoard.transform.position.y + rotatingBoard.transform.lossyScale.y/2);
         boundList.Add(rotatingBoard.transform.position.x - rotatingBoard.transform.lossyScale.x/2);
         boundList.Add(rotatingBoard.transform.position.x + rotatingBoard.transform.lossyScale.x/2);
-        LinkCounter.instance.SetBoardBounds(boundList);
+        //LinkCounter.instance.SetBoardBounds(boundList);
         GenerateNewLink();
     }
 
@@ -41,6 +41,7 @@ public class GunLogic : MonoBehaviour
         typeOfLinksUsed[linkPrebabIndex] += 1;
         currentLink.transform.parent = null;
         currentLink.GetComponent<Rigidbody>().AddForce(transform.rotation * hitStrength);
+        AudioManager.instance.PlayOneShot("Hammer3");
     }
 
     void GenerateNewLink()

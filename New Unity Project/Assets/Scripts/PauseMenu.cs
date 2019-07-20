@@ -23,6 +23,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         AM = FindObjectOfType<AudioManager>();
         menuPanel.SetActive(false);
+  //      AM.Play("VideoGameMusic");
 
     }
 
@@ -38,6 +39,7 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0;
+            AM.Stop("VideoGameMusic");
             AM.Play("MedievalMusic");
         }
         if (gameOver)
@@ -49,8 +51,7 @@ public class PauseMenu : MonoBehaviour
                 pausePanel.SetActive(false);
                 breakevenScreen.SetActive(false);
                 loseScreen.SetActive(false);
-
-                AM.Play("WinAudio");
+                AM.PlayOneShot("WinAudio");
             }
             if (score < winScore && score >= 0)
             {
@@ -58,18 +59,16 @@ public class PauseMenu : MonoBehaviour
                 pausePanel.SetActive(false);
                 breakevenScreen.SetActive(true);
                 loseScreen.SetActive(false);
-
-                AM.Play("Breakeven");
+                AM.PlayOneShot("Breakeven");
             }
             if (score < 0)
             {
-                AM.Play("LoseAudio");
+                AM.PlayOneShot("LoseAudio");
                 winScreen.SetActive(false);
                 pausePanel.SetActive(false);
                 breakevenScreen.SetActive(false);
                 loseScreen.SetActive(true);
             }
-
         }
     }
 
@@ -78,6 +77,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
   //      Cursor.visible = false;
         menuPanel.SetActive(false);
+        AM.Stop("MedievalMusic");
         AM.Play("VideoGameMusic");
         Time.timeScale = 1;
     }
@@ -91,6 +91,7 @@ public class PauseMenu : MonoBehaviour
         menuPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        AM.Stop("MedievalMusic");
         AM.Play("VideoGameMusic");
         Time.timeScale = 1;
     }

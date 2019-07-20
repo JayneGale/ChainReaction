@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 987169003914084584}
   m_Layer: 9
   m_Name: link Gold
-  m_TagString: Untagged
+  m_TagString: Gold
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

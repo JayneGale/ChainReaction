@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4018935280290207325}
   m_Layer: 9
   m_Name: link copper
-  m_TagString: Untagged
+  m_TagString: Copper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
