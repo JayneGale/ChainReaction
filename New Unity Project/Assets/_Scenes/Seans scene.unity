@@ -634,9 +634,11 @@ MonoBehaviour:
   winScreen: {fileID: 245322095}
   breakevenScreen: {fileID: 1108539009}
   loseScreen: {fileID: 730007221}
+  score: -10
+  winScore: 10
   gameOver: 0
   timeRemaining: {fileID: 91632777}
-  timeRemains: 30
+  timeRemains: 20
 --- !u!4 &674666900
 Transform:
   m_ObjectHideFlags: 0
@@ -773,7 +775,7 @@ MonoBehaviour:
   - name: LinksConnect
     clip: {fileID: 8300000, guid: 3e140337dbfd29341a6ee0e19d47f8c7, type: 3}
     volume: 1
-    volumeVariance: 0.4
+    volumeVariance: 0.1
     pitch: 0.6
     pitchVariance: 0.3
     loop: 0
@@ -897,9 +899,9 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: VideoGameMusic
-    clip: {fileID: 8300000, guid: b3c28cac5b8538b4ba2f44f131a1bb1e, type: 3}
-    volume: 1
-    volumeVariance: 0.5
+    clip: {fileID: 8300000, guid: a46ef1987c774f84bb39e6ba74004348, type: 3}
+    volume: 0.5
+    volumeVariance: 0.3
     pitch: 0.5
     pitchVariance: 0.2
     loop: 1
