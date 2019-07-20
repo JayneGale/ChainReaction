@@ -17,7 +17,7 @@ public class FaceMouse : MonoBehaviour
 
         float x = mouseWorldPos.x - transform.position.x;
         float y = mouseWorldPos.y - transform.position.y;
-        print(x);
+        //print(x);
         //print(y);
         float angle = Mathf.Abs(Mathf.Atan(x/y)) * 180/Mathf.PI;
         float sign = Mathf.Sign(mouseWorldPos.x);

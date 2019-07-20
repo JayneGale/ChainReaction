@@ -4,27 +4,31 @@ using UnityEngine;
 
 public class CollisionDetect : MonoBehaviour
 {
-    bool fired = false;
+    GameObject rotatingBoard;
+    float setColliderOnDelay = 1f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(SetColliderOn());
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    IEnumerator SetColliderOn()
     {
-        
+        yield return new WaitForSeconds(setColliderOnDelay);
+        GetComponent<Collider>().enabled = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!fired)
-        {
-            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            transform.parent = collision.transform;
-            fired = true;
-        }
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+        transform.parent = rotatingBoard.transform;
+        LinkCounter.instance.AddLinksAndCheckNeighbours(gameObject);
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+    }
 
+    public void SetRotatingBoard(GameObject board)
+    {
+        rotatingBoard = board;
     }
 }
