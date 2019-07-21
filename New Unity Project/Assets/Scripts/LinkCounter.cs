@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LinkCounter : MonoBehaviour
 {
+    public List<Collider> armourBounds;
     List<List<int>> paths = new List<List<int>>();
     List<GameObject> links = new List<GameObject>();
     List<GraphEdge> neighbours = new List<GraphEdge>();
@@ -47,6 +48,70 @@ public class LinkCounter : MonoBehaviour
     {
         boardBounds = bounds;
     }
+
+    public void CheckScore()
+    {
+        int scoredLinks = 0;
+        foreach (GameObject link in links)
+        {
+            bool shouldCount = false;
+            Vector3 pos = link.transform.position;
+            foreach (Collider box in armourBounds)
+            {
+                if (box.bounds.Contains(pos))
+                {
+                    shouldCount = true;
+                }
+            }
+            if (shouldCount){
+                scoredLinks += 1;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     void CheckLoop()
     {

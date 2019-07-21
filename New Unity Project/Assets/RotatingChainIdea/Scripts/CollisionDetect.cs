@@ -21,11 +21,12 @@ public class CollisionDetect : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Collision", collision.gameObject);
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         transform.parent = rotatingBoard.transform;
         AudioManager.instance.PlayOneShot("LinksConnect");
         LinkCounter.instance.AddLinksAndCheckNeighbours(gameObject);
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
 
     public void SetRotatingBoard(GameObject board)
