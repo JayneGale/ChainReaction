@@ -104,14 +104,13 @@ public class PauseMenu : MonoBehaviour
 
     public void GameResume()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-  //      Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 1;
         menuPanel.SetActive(false);
         pausePanel.SetActive(false);
         endScreen.SetActive(false);
         AudioManager.instance.Stop("MedievalMusic");
         AudioManager.instance.Play("VideoGameMusic");
-        Time.timeScale = 1;
     }
 
     public void PlayAgain()

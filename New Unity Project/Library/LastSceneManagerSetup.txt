@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< refs/remotes/origin/Sean
 - path: Assets/_Scenes/Hammer Hand.unity
-=======
-- path: Assets/_Scenes/Jayne Test Scene.unity
->>>>>>> Changes to Menus and new Menu prefab
   isLoaded: 1
   isActive: 1
   isSubScene: 0
