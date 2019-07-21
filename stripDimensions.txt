@@ -1,0 +1,9 @@
+
+Dimensions of chain strip
+474x161
+width of each cell: 158
+
+
+dimensions of hammer strip
+Height 650
+Width of each cell : 456
