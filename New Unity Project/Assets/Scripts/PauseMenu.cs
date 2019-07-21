@@ -9,22 +9,21 @@ public class PauseMenu : MonoBehaviour
     public KeyCode PauseKey;
     public GameObject menuPanel;
     public GameObject pausePanel;
+    public GameObject endScreen;
     public GameObject winScreen;
     public GameObject breakevenScreen;
     public GameObject loseScreen;
-    public int score = -10;
-    int testScore = 5;
-    public int winScore = 10;
 
-    public bool gameOver = false;
+    public int score = -10;
+    public int winScore = 10;
+    bool gameOver = false;
 
     public Text timeRemaining;
     public float timeRemains;
     float tempTimeRemains;
     int timeInt;
     bool timeOn;
-
-
+    
     public void Start()
 
     {
@@ -46,9 +45,10 @@ public class PauseMenu : MonoBehaviour
             winScreen.SetActive(false);
             breakevenScreen.SetActive(false);
             loseScreen.SetActive(false);
+            endScreen.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
- //           Time.timeScale = 0;
+            Time.timeScale = 0;
             AudioManager.instance.Stop("VideoGameMusic");
             AudioManager.instance.Play("MedievalMusic");
         }
@@ -71,21 +71,23 @@ public class PauseMenu : MonoBehaviour
         if (gameOver)
         {
             menuPanel.SetActive(true);
+            endScreen.SetActive(true);
+            Time.timeScale = 0;
             if (score >= winScore)
             {
                 winScreen.SetActive(true);
-                pausePanel.SetActive(false);
                 breakevenScreen.SetActive(false);
                 loseScreen.SetActive(false);
+                pausePanel.SetActive(false);
                 AudioManager.instance.PlayOneShot("WinAudio");
             }
 
             if (score < winScore && score >= 0)
             {
                 winScreen.SetActive(false);
-                pausePanel.SetActive(false);
                 breakevenScreen.SetActive(true);
                 loseScreen.SetActive(false);
+                pausePanel.SetActive(false);
                 AudioManager.instance.PlayOneShot("Breakeven");
             }
 
@@ -105,6 +107,8 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
   //      Cursor.visible = false;
         menuPanel.SetActive(false);
+        pausePanel.SetActive(false);
+        endScreen.SetActive(false);
         AudioManager.instance.Stop("MedievalMusic");
         AudioManager.instance.Play("VideoGameMusic");
         Time.timeScale = 1;
@@ -117,6 +121,7 @@ public class PauseMenu : MonoBehaviour
         breakevenScreen.SetActive(false);
         loseScreen.SetActive(false);
         menuPanel.SetActive(false);
+        endScreen.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         AudioManager.instance.Stop("MedievalMusic");

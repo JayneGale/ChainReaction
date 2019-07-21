@@ -1,1 +1,5 @@
+<<<<<<< refs/remotes/origin/Sean
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-24.28072738647461,"y":-4.3088765144348148,"z":-1.19140625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":29.828025817871095,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":185.26870727539063,"y":-67.51870727539063,"z":0.0},"rotation":{"x":0.04314044490456581,"y":-0.04135293513536453,"z":-0.0017906752182170749,"w":-0.9982203841209412},"size":671.013671875,"orthographic":false}
+>>>>>>> Changes to Menus and new Menu prefab
