@@ -33,6 +33,8 @@ public class PauseMenu : MonoBehaviour
         timeRemaining.text = "" + timeRemains;
         timeOn = true;
         tempTimeRemains = timeRemains;
+        AudioManager.instance.Play("VideoGameMusic");
+
     }
 
     private void Update()
