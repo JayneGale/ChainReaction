@@ -79,7 +79,7 @@ public class PauseMenu : MonoBehaviour
                 breakevenScreen.SetActive(false);
                 loseScreen.SetActive(false);
                 pausePanel.SetActive(false);
-                AudioManager.instance.PlayOneShot("WinAudio");
+                AudioManager.instance.Play("WinAudio");
             }
 
             if (score < winScore && score >= 0)
@@ -88,16 +88,16 @@ public class PauseMenu : MonoBehaviour
                 breakevenScreen.SetActive(true);
                 loseScreen.SetActive(false);
                 pausePanel.SetActive(false);
-                AudioManager.instance.PlayOneShot("Breakeven");
+                AudioManager.instance.Play("Breakeven");
             }
 
             if (score < 0)
             {
+                AudioManager.instance.Play("LoseAudio");
                 winScreen.SetActive(false);
                 pausePanel.SetActive(false);
                 breakevenScreen.SetActive(false);
                 loseScreen.SetActive(true);
-                AudioManager.instance.PlayOneShot("LoseAudio");
             }
         }
     }
@@ -115,7 +115,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         winScreen.SetActive(false);
         breakevenScreen.SetActive(false);
         loseScreen.SetActive(false);

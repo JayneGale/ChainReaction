@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/Seans scene.unity
-    guid: bbc8de398de1be94e88388c838b1f05c
+    path: Assets/_Scenes/StartScene.unity
+    guid: 96431da8f4ac34e4a9824b286dbe3a00
+  - enabled: 1
+    path: Assets/_Scenes/Hammer Hand.unity
+    guid: a5a391268d8af8b4cb3c916fdef4b088
   m_configObjects: {}
