@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    bool scoreCalculated;
     public KeyCode PauseKey;
     public GameObject menuPanel;
     public GameObject pausePanel;
@@ -33,6 +34,8 @@ public class PauseMenu : MonoBehaviour
         timeOn = true;
         tempTimeRemains = timeRemains;
         AudioManager.instance.Play("VideoGameMusic");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
 
     }
 
@@ -68,8 +71,14 @@ public class PauseMenu : MonoBehaviour
             gameOver = true;
         }
 
-        if (gameOver)
+        if (gameOver && !scoreCalculated)
         {
+
+                score = LinkCounter.instance.CheckScore();
+                scoreCalculated = true;
+
+            AudioManager.instance.Stop("VideoGameMusic");
+
             menuPanel.SetActive(true);
             endScreen.SetActive(true);
             Time.timeScale = 0;
@@ -105,6 +114,7 @@ public class PauseMenu : MonoBehaviour
     public void GameResume()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
         Time.timeScale = 1;
         menuPanel.SetActive(false);
         pausePanel.SetActive(false);
@@ -122,7 +132,7 @@ public class PauseMenu : MonoBehaviour
         menuPanel.SetActive(false);
         endScreen.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.visible = false;
         AudioManager.instance.Stop("MedievalMusic");
         AudioManager.instance.Play("VideoGameMusic");
         Time.timeScale = 1;

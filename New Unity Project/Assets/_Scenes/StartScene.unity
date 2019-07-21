@@ -573,7 +573,7 @@ PrefabInstance:
     - target: {fileID: 7456212206228500541, guid: a57185c3bf01c89419a285a79163df96,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Start
+      value: StartGame
       objectReference: {fileID: 0}
     - target: {fileID: 7456212205572712968, guid: a57185c3bf01c89419a285a79163df96,
         type: 3}
@@ -604,6 +604,30 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: START
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456212205572712968, guid: a57185c3bf01c89419a285a79163df96,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 7bc54b7db24be014c9f39d4c8c87acfa,
+        type: 3}
+    - target: {fileID: 7456212206295594786, guid: a57185c3bf01c89419a285a79163df96,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 7bc54b7db24be014c9f39d4c8c87acfa,
+        type: 3}
+    - target: {fileID: 7456212207135640167, guid: a57185c3bf01c89419a285a79163df96,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 7bc54b7db24be014c9f39d4c8c87acfa,
+        type: 3}
+    - target: {fileID: 7456212207135640167, guid: a57185c3bf01c89419a285a79163df96,
+        type: 3}
+      propertyPath: m_Text
+      value: "Move links with mouse\nLeft click to hammer in \n\nScored on: \nMake
+        the chain mail shape\nConnect same colour links"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a57185c3bf01c89419a285a79163df96, type: 3}

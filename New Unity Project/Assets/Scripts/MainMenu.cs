@@ -9,13 +9,12 @@ public class MainMenu : MonoBehaviour
     public GameObject MainmenuPanel;
 
     // Start is called before the first frame update
-    public void Start()
+    public void StartGame()
     {
         SceneManager.LoadScene(1);
         MainmenuPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        AudioManager.instance.Play("VideoGameMusic");
         Time.timeScale = 1;
     }
 

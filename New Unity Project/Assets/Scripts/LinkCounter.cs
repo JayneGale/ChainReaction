@@ -11,6 +11,7 @@ public class LinkCounter : MonoBehaviour
     public static LinkCounter instance;
     //Up, Down, Left, Right Bounds for board
     public List<float> boardBounds;
+    int scoreCounter = 0;
     // Start is called before the first frame update
     bool foundLoop = false;
     void Start()
@@ -26,6 +27,8 @@ public class LinkCounter : MonoBehaviour
 
     public void AddLinksAndCheckNeighbours(GameObject link)
     {
+        scoreCounter++;
+        /*
         Collider linkCollider = link.GetComponent<Collider>();
         for(int i = 0; i < links.Count; i++)
         {
@@ -37,6 +40,7 @@ public class LinkCounter : MonoBehaviour
             }
         }
         AddLinkToList(link);
+        */
     }
 
     void AddLinkToList(GameObject link)
@@ -49,8 +53,10 @@ public class LinkCounter : MonoBehaviour
         boardBounds = bounds;
     }
 
-    public void CheckScore()
+    public int CheckScore()
     {
+        return (scoreCounter += Random.Range(-20,5));
+        /*
         int scoredLinks = 0;
         foreach (GameObject link in links)
         {
@@ -66,7 +72,7 @@ public class LinkCounter : MonoBehaviour
             if (shouldCount){
                 scoredLinks += 1;
             }
-        }
+        }*/
     }
 
 

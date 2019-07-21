@@ -32,12 +32,16 @@ public class CollisionDetect2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<CollisionDetect2>().killSwitch = false;
-        other.gameObject.GetComponent<Collider>().isTrigger = true;
-        Debug.Log("Collision", other.gameObject);
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-        AudioManager.instance.PlayOneShot("LinksConnect");
-        LinkCounter.instance.AddLinksAndCheckNeighbours(gameObject);
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        if (other.name.Substring(0,4) == "link")
+        {
+            other.gameObject.GetComponent<CollisionDetect2>().killSwitch = false;
+            other.gameObject.GetComponent<Collider>().isTrigger = true;
+            Debug.Log("Collision", other.gameObject);
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            AudioManager.instance.PlayOneShot("LinksConnect");
+            LinkCounter.instance.AddLinksAndCheckNeighbours(gameObject);
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        }
+        
     }
 }

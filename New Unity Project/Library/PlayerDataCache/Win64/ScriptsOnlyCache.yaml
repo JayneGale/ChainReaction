@@ -83,19 +83,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9664}
     - Class: 114
-      Script: {instanceID: 10184}
+      Script: {instanceID: 10186}
     - Class: 114
-      Script: {instanceID: 10188}
-    - Class: 114
-      Script: {instanceID: 10248}
+      Script: {instanceID: 10190}
     - Class: 114
       Script: {instanceID: 10250}
     - Class: 114
-      Script: {instanceID: 10288}
+      Script: {instanceID: 10252}
     - Class: 114
-      Script: {instanceID: 10644}
+      Script: {instanceID: 10290}
     - Class: 114
-      Script: {instanceID: 10954}
+      Script: {instanceID: 10646}
+    - Class: 114
+      Script: {instanceID: 10956}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -148,7 +148,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9438}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 10028}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1078,6 +1078,12 @@ ScriptsOnlyBuild:
     className: WireframeTrackableEventHandler
   - hash:
       serializedVersion: 2
+      Hash: e4bb5b6d7a3f9d651f297dcf5731e62e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1682,14 +1688,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: e4bb5b6d7a3f9d651f297dcf5731e62e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenu
   platform: 19
   scenePathNames:
   - Assets/_Scenes/StartScene.unity
   - Assets/_Scenes/Hammer Hand.unity
-  playerPath: D:/932400056/Documents/Git/ChainReactionBuild0/New Unity Project.exe
+  playerPath: D:/932400056/Documents/Git/ChainMailForger/New Unity Project.exe
